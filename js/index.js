@@ -8,8 +8,8 @@ function inputLength() {
 }
 
 //chek the length of li elements
-function checkList(){
-  return document.getElementsByTagName('li').length;
+function checkList() {
+	return document.getElementsByTagName('li').length;
 }
 
 // Create a new list item and add to dom
@@ -21,23 +21,23 @@ function createListElement() {
 	ul.appendChild(li);
 	input.value = "";
 
-// Add a delete button to list item
-	var delbtnText = "X"
+	// Add a delete button to list item
+	var delbtnText = "Delete"
 	var delbtn = document.createElement("button");
 	delbtn.classList.add("delbtn");
 	delbtn.appendChild(document.createTextNode(delbtnText));
-		delbtn.addEventListener("click", delItem);
+	delbtn.addEventListener("click", delItem);
 	li.appendChild(delbtn);
 
-//toggle linethrough on compleated items
-function crossOfCompletedItems() {
-	li.classList.toggle("done");
-}
+	//toggle linethrough on compleated items
+	function crossOfCompletedItems() {
+		li.classList.toggle("done");
+	}
 
-// Delete item from the dom
-function delItem() {
-	li.remove();
-}	
+	// Delete item from the dom
+	function delItem() {
+		li.remove();
+	}
 }
 
 // Add list item on click event
